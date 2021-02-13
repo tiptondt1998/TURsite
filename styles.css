@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+header{
+    color: white;
+    align-content: center;
+}
+
+p{
+    text-align: center;
+    color: #87CEFA;
+    margin-top: -7.7%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#banner{
+    height: 300px;
+    width: 100%;
+}
+
+#guide{
+    color: white;
+}
