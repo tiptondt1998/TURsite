@@ -13,7 +13,7 @@ function Signup(props) {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
-        username: formState.username, email: formState.email, password: formState.password,
+        username: formState.username, email: formState.email, password: formState.password, sex: "Male", bio: 'demo'
       }
     });
     const token = mutationResponse.data.addUser.token;
@@ -30,6 +30,8 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
+      <p>Welcome to the TUR family!</p>
+      <br/>
       <Link to="/login">
         ← Go to Login
       </Link>
