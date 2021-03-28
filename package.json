@@ -1,0 +1,28 @@
+{
+  "name": "TURsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiptondt1998/TURsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiptondt1998/TURsite/issues"
+  },
+  "homepage": "https://github.com/tiptondt1998/TURsite#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "react": "^17.0.2"
+  }
+}
