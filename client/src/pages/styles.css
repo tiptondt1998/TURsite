@@ -2,11 +2,23 @@ body {
     background-color: black;
 }
 h2 {
-    color: white;
+    color: black;
 }
 .input_field {
-    color:white
+    color:black
 }
 p {
     color: white
+}
+
+img{
+    height: 300px;
+    width: 1000px;
+    margin-left: 13.2%;
+    margin-right: 30%;
+}
+
+section {
+    background-color: white;
+    color: black;
 }

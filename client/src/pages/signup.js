@@ -7,19 +7,26 @@ import './styles.css';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser] = useMutation(ADD_USER);
+  const [addUser, {error}] = useMutation(ADD_USER);
+  const [validated, setValidated] = useState(false);
 
   const handleFormSubmit = async event => {
     event.preventDefault();
-    const mutationResponse = await addUser({
-      variables: {
-        username: formState.username, email: formState.email, password: formState.password, sex: "Male", bio: 'demo'
+    const form = event.currentTarget;
+    try {
+      if (form.checkValidity() === false) {
+        event.stopPropagation();
       }
-    });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
+      setValidated(true)
+      const { data } = await addUser({
+        variables: {...formState } 
+      });
+      Auth.login(data.addUser.token);
+      // console.log(formState)
+    } catch (e) {
+      console.error(e)
+    }
   };
-
   const handleChange = event => {
     const { name, value } = event.target;
     setFormState({
@@ -30,12 +37,12 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
-      <p>Welcome to the TUR family!</p>
       <br/>
       <Link to="/login">
         ← Go to Login
       </Link>
       <body>
+        <section class='singupForm'>
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
 
@@ -76,7 +83,9 @@ function Signup(props) {
             Submit
           </button>
         </div>
+        {error && <div class='input_field'>Username and/or email already taken</div>}
       </form>
+      </section>
       </body>
     </div>
     

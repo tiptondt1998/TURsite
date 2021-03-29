@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
-
+import logo from './assets/tur_logo.JPG'
 import Login from './pages/login';
 import Signup from './pages/signup';
 import Home from './pages/Home';
@@ -23,8 +23,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        
         <div>
-          Welcome to the TUR Family
+          <header>
+          <img src={logo} alt='site logo'/>
+          </header>
+          <p>Welcome to the TUR family!</p>
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route exact path="/login" component={Login} />
