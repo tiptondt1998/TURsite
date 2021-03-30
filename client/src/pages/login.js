@@ -17,7 +17,10 @@ function Login(props) {
       const mutationResponse = await login({ variables: { email: formState.email, password: formState.password } })
       const token = mutationResponse.data.login.token;
       Auth.login(token);
-      history.push('/profile');
+      if(mutationResponse){
+        document.location.replace('/profile')
+      }
+      // history.push('/profile');
     } catch (e) {
       console.log(e)
     }
@@ -60,10 +63,7 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        {
-          error ? <div>
-            <p className="error-text" >The provided credentials are incorrect</p>
-          </div> : null
+        {error ? <div><p className="error-text" >The provided credentials are incorrect</p></div> : null
         }
         <div className="flex-row flex-end">
           <button type="submit">
