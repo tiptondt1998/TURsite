@@ -4,18 +4,20 @@ import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations"
 import Auth from "../utils/auth";
 import './styles.css'
+import {useHistory} from 'react-router-dom';
 
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' })
   const [login, { error }] = useMutation(LOGIN);
-
+  const history = useHistory();
   const handleFormSubmit = async event => {
     event.preventDefault();
     try {
       const mutationResponse = await login({ variables: { email: formState.email, password: formState.password } })
       const token = mutationResponse.data.login.token;
       Auth.login(token);
+      history.push('/profile');
     } catch (e) {
       console.log(e)
     }
