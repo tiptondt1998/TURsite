@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations"
 import Auth from "../utils/auth";
 import './styles.css'
-import {useHistory} from 'react-router-dom';
 
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' })
   const [login, { error }] = useMutation(LOGIN);
-  const history = useHistory();
   const handleFormSubmit = async event => {
     event.preventDefault();
     try {
@@ -20,7 +18,6 @@ function Login(props) {
       if(mutationResponse){
         document.location.replace('/profile')
       }
-      // history.push('/profile');
     } catch (e) {
       console.log(e)
     }

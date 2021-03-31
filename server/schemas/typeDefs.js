@@ -6,7 +6,6 @@ type User {
     _id: ID
     username: String
     email: String
-    image: String
     comments: [Comment]
     friends: [User]
     friendCount: Int
@@ -38,7 +37,7 @@ type Query {
 
 type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!, image: String, age: String, sex: String!, bio: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     addComment(commentText: String!): Comment
     addReply(commentId: ID!, replyText: String!): Comment
     addFriend(friendId: ID!): User

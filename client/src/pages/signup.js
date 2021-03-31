@@ -6,7 +6,7 @@ import { ADD_USER } from "../utils/mutations";
 import './styles.css';
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: '',username: '', password: '' });
   const [addUser, {error}] = useMutation(ADD_USER);
   const [validated, setValidated] = useState(false);
 
@@ -22,7 +22,7 @@ function Signup(props) {
         variables: {...formState } 
       });
       Auth.login(data.addUser.token);
-      // console.log(formState)
+       console.log(formState)
     } catch (e) {
       console.error(e)
     }
