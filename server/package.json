@@ -2,7 +2,6 @@
   "name": "tursite-server",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://tiptondt1998.github.io/TURsite",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
