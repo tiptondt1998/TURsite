@@ -22,3 +22,21 @@ section {
     background-color: white;
     color: black;
 }
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    }
+
+
+#meet {
+    color: black;
+    margin-left: 40%;
+}
+#meet_jay {
+    color: black;
+}
