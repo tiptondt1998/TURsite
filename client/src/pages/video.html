@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="getTUR()">load</button>
+</body>
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+
+  var  apiURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=turjay&key=AIzaSyDRv7jX_KdBRx5kMMagdp-DHEYQgY_oHLU";
+
+  var getTUR = function(){
+    fetch(apiUrl)
+    .then(function(response) {
+      if (response.ok) {
+        response.json().then(function(data) {
+          console.log(data);
+          //displayMostPopularGames(data);
+        });
+      } else {
+        alert("Error: " + response.statusText);
+      }
+    });
+    }
+</script>
+</html>
