@@ -30,10 +30,15 @@
     });
     }
     function displayVideos(data){
+      for(i=1; i<5;i++){
+      let vidID = data.items[i].id.videoId;
+      youtubeURL = 'https://www.youtube.com/embed/' + vidID;
+      console.log(vidID);
+      var holder = document.createElement('iframe');
+      holder.setAttribute('src', youtubeURL);
+      vid.appendChild(holder);
 
-      let vidID = data.items.videoID;
-      window.alert(vidID);
-
+      }
        // once again removing persistant html
     // vid.innerHTML = ''
     // var vidArray = [];
