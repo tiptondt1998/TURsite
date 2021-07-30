@@ -4,28 +4,63 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Videos</title>
 </head>
 <body>
+  <div id="vid">
   <button onclick="getTUR()">load</button>
+  </div>
 </body>
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
-
+  let vid = document.getElementById("vid");
   var  apiURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=turjay&key=AIzaSyDRv7jX_KdBRx5kMMagdp-DHEYQgY_oHLU";
 
-  var getTUR = function(){
-    fetch(apiUrl)
+  function getTUR(){
+    fetch(apiURL)
     .then(function(response) {
       if (response.ok) {
         response.json().then(function(data) {
           console.log(data);
-          //displayMostPopularGames(data);
+          displayVideos(data);
         });
       } else {
         alert("Error: " + response.statusText);
       }
     });
+    }
+    function displayVideos(data){
+
+      let vidID = data.items.videoID;
+      window.alert(vidID);
+
+       // once again removing persistant html
+    // vid.innerHTML = ''
+    // var vidArray = [];
+    // placing all results into an array to eventually be pushed into buttons 
+    // for(let i = 0; i<data.items.length; i++){
+    // vidArray.push(data.items[i]);
+    // if(vidArray.length === 5){
+    //   break;
+    // }
+    // }
+    // for(let i = 0; i<vidArray.length; i++){
+    //   var holder = vidArray[i];
+      // create an element every time that holds the value and the append it to the body of the 
+      // project which is 'games' you can also add a class by doing
+      // gameholder.classList.add(classNameHere)
+      // var vidHolder = document.createElement('button')
+      // vidHolder.setAttribute('id',holder.id)
+      //vidHolder.classList.add('nes-btn')
+    //   vidHolder.classList.add('btnDisplay')
+    //   vidHolder.innerHTML = holder.name;
+    //   vid.appendChild(vidHolder)	
+    //   vidHolder.addEventListener('click',function (params) {
+    //     fetchInfo(this.id)
+    //   })
+
+    // }
+
     }
 </script>
 </html>
