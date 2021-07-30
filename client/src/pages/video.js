@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Videos</title>
-</head>
-<body>
-  <div id="vid">
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import './styles.css';
 
-    Name:
-    <input type="text"
-           id="uname">
-  
-    <button type="button" 
-            onclick="getTUR()")>
-      Get videos
-  </button>
-  <br>
-  </div>
-</body>
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
+function video(){
+    
+ <script src="https://apis.google.com/js/api.js"></script>
   var vid = document.getElementById("vid");
 
   function getTUR(vid){
@@ -51,5 +34,16 @@
 
       }
     }
-</script>
-</html>
+
+    return(
+        <section id="meet-jay">
+        <div id="vid">
+    Name:
+    <input type="text"
+           id="uname" />
+    <button type="button" 
+            onclick="getTUR()"> get videos </button> 
+        </div>
+        </section>
+    )
+}
