@@ -6,7 +6,8 @@ import logo from './assets/tur_logo.JPG'
 import Login from './pages/login';
 import Signup from './pages/signup';
 import Home from './pages/Home';
-import profile from './pages/profile';
+import Profile from './pages/Profile';
+import Video from './pages/Video';
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem('id_token');
@@ -33,7 +34,8 @@ function App() {
             <Route exact path='/' component={Home}/>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path='/profile' component={profile}/>
+            <Route exact path='/Profile' component={Profile}/>
+            <Route exact path='/Video' component={Video}/>
           </Switch>
         </div>
       </Router>

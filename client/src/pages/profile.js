@@ -1,11 +1,13 @@
 import "./styles.css";
 import 'gapi';
- function profile(){
+import "./Video";
+import {Link} from 'react-router-dom'
+export default function Profile(){
     return(
         <section>
 
             <ul>
-                <li> <a href="./video">Videos</a> </li>
+                <li> <Link to='/Video'>Videos</Link> </li>
                 <li> <a>Merch Store</a> </li>
                 <li> <a>Application</a> </li>
             </ul>
@@ -26,4 +28,3 @@ import 'gapi';
         
     )
 }
-export default profile;
