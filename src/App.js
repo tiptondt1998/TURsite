@@ -8,7 +8,6 @@ import Signup from './pages/signup';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Video from './pages/Video';
-import Index from './index';
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem('id_token');
