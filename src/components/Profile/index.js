@@ -1,5 +1,4 @@
 import "../styles.css";
-import 'gapi';
 import "../Video";
 import {Link} from 'react-router-dom'
 export default function Profile(){

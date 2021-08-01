@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.23c9208a.chunk.css",
+    "main.js": "/static/js/main.54ddb9db.chunk.js",
+    "main.js.map": "/static/js/main.54ddb9db.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.02ad59bf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.02ad59bf.js.map",
+    "static/js/2.85259f1a.chunk.js": "/static/js/2.85259f1a.chunk.js",
+    "static/js/2.85259f1a.chunk.js.map": "/static/js/2.85259f1a.chunk.js.map",
+    "static/js/3.d129aa79.chunk.js": "/static/js/3.d129aa79.chunk.js",
+    "static/js/3.d129aa79.chunk.js.map": "/static/js/3.d129aa79.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.23c9208a.chunk.css.map": "/static/css/main.23c9208a.chunk.css.map",
+    "static/js/2.85259f1a.chunk.js.LICENSE.txt": "/static/js/2.85259f1a.chunk.js.LICENSE.txt",
+    "static/media/tur_logo.07654563.JPG": "/static/media/tur_logo.07654563.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02ad59bf.js",
+    "static/js/2.85259f1a.chunk.js",
+    "static/css/main.23c9208a.chunk.css",
+    "static/js/main.54ddb9db.chunk.js"
+  ]
+}
