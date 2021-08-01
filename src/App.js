@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import logo from './assets/tur_logo.JPG'
-import Login from './pages/login';
-import Signup from './pages/signup';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Video from './pages/Video';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Home from './components/Home';
+import Profile from './components/Profile';
+import Video from './components/Video';
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem('id_token');
