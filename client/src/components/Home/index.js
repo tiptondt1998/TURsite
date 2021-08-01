@@ -1,7 +1,7 @@
 import React from 'react';
-import Login from './login'
+import Login from '../Login'
 import logo from '../assets/tur_logo.JPG';
-import './styles.css';
+import '../styles.css';
 
 const Home = () => {
   return (

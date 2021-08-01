@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import './styles.css';
+import '../styles.css';
 
 export default function Video(){
 const [member, setMember]=useState('');
